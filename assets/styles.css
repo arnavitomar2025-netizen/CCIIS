@@ -1,0 +1,286 @@
+/* =====================================================================
+   CCIIS — CYBER CRIME INVESTIGATION & INTELLIGENCE SYSTEM
+   Visual Identity: BLACK / RED / WHITE
+   Typography: Bold Condensed Display — Barlow Condensed + IBM Plex Mono
+   ZERO BLUE. ZERO NEON. ZERO GRADIENTS. ZERO GLASSMORPHISM.
+   Restrained. Serious. Editorial. Government cybercrime portal.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-main:          #0A0A0A;
+  --bg-secondary:     #111111;
+  --bg-panel:         #161616;
+  --bg-elevated:      #1C1C1C;
+  --border-main:      #2A2A2A;
+  --border-subtle:    #1E1E1E;
+  --border-prominent: #383838;
+  --text-white:       #FFFFFF;
+  --text-primary:     #F0EDE8;
+  --text-secondary:   #8A8480;
+  --text-dim:         #504C49;
+  --red:              #C8102E;
+  --red-dark:         #9C0D24;
+  --red-muted:        #7A1020;
+  --status-success:   #2E6B30;
+  --status-warning:   #CC5500;
+  --font-display:     'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body:        'Barlow', -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:        'IBM Plex Mono', Consolas, 'SF Mono', monospace;
+}
+
+html, body, [class*="css"], .stApp {
+  font-family: var(--font-body) !important;
+  background-color: var(--bg-main) !important;
+  color: var(--text-primary) !important;
+}
+
+a { color: var(--text-primary) !important; text-decoration: none !important; }
+a:hover { color: var(--red) !important; }
+
+.main .block-container {
+  padding-top: 0.75rem !important;
+  padding-bottom: 3rem !important;
+  max-width: 98% !important;
+}
+
+[data-testid="stSidebar"] {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-main) !important;
+  padding-top: 0 !important;
+}
+
+/* ─── Agency Masthead ─── */
+.agency-masthead { padding: 0; margin-bottom: 0; border-bottom: 1px solid var(--border-main); }
+.masthead-red-bar { background: var(--red); height: 4px; width: 100%; }
+.masthead-body { padding: 16px 14px 14px; background: var(--bg-panel); }
+.masthead-dept {
+  font-family: var(--font-mono); font-size: 0.55rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;
+}
+.masthead-acronym {
+  font-family: var(--font-display); font-size: 2.4rem; font-weight: 900;
+  color: var(--text-white); letter-spacing: 0.04em; line-height: 1; margin-bottom: 2px;
+}
+.masthead-acronym span { color: var(--red); }
+.masthead-fullname {
+  font-family: var(--font-body); font-size: 0.70rem; font-weight: 500;
+  color: var(--text-secondary); letter-spacing: 0.01em; line-height: 1.3;
+}
+.masthead-classification {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.52rem;
+  font-weight: 600; letter-spacing: 0.10em; color: var(--red);
+  border: 1px solid var(--red-muted); padding: 2px 6px; margin-top: 10px;
+  text-transform: uppercase; background: rgba(200, 16, 46, 0.06);
+}
+
+/* ─── Sidebar Nav ─── */
+[data-testid="stSidebar"] div[role="radiogroup"] {
+  gap: 0 !important; padding: 8px 0 !important;
+}
+[data-testid="stSidebar"] div[role="radiogroup"] label {
+  border-radius: 0 !important; padding: 10px 14px !important;
+  font-family: var(--font-display) !important; font-size: 0.88rem !important;
+  font-weight: 600 !important; letter-spacing: 0.06em !important;
+  text-transform: uppercase !important; color: var(--text-secondary) !important;
+  border: none !important; border-left: 3px solid transparent !important;
+  background: transparent !important; margin: 0 !important;
+}
+[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
+  background: var(--bg-elevated) !important; color: var(--text-white) !important;
+  border-left-color: var(--border-prominent) !important;
+}
+[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child { display: none !important; }
+
+/* ─── Officer Panel ─── */
+.officer-panel {
+  background: var(--bg-panel); border: 1px solid var(--border-main);
+  border-top: 2px solid var(--red); padding: 12px 14px; margin: 8px 8px 0;
+}
+.officer-badge {
+  font-family: var(--font-mono); font-size: 0.54rem; text-transform: uppercase;
+  letter-spacing: 0.10em; color: var(--text-dim); margin-bottom: 4px;
+}
+.officer-name {
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+  color: var(--text-white); letter-spacing: 0.03em; text-transform: uppercase;
+}
+.officer-rank { font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px; }
+.officer-id { font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-dim); margin-top: 6px; }
+
+/* ─── Page Masthead ─── */
+.page-masthead {
+  border-bottom: 1px solid var(--border-main); padding-bottom: 14px; margin-bottom: 20px;
+}
+.page-masthead::before {
+  content: ""; display: block; width: 40px; height: 3px;
+  background: var(--red); margin-bottom: 10px;
+}
+.page-masthead-prefix {
+  font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--red); margin-bottom: 4px;
+}
+.page-masthead-title {
+  font-family: var(--font-display); font-size: 2.0rem; font-weight: 800;
+  color: var(--text-white); letter-spacing: 0.02em; text-transform: uppercase;
+  line-height: 1.0; margin: 0;
+}
+.page-masthead-desc {
+  font-size: 0.80rem; color: var(--text-secondary); margin-top: 6px;
+  line-height: 1.4; max-width: 640px;
+}
+.page-masthead-meta {
+  font-family: var(--font-mono); font-size: 0.60rem; color: var(--text-dim);
+  margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* ─── Metrics ─── */
+div[data-testid="stMetric"] {
+  background: var(--bg-panel) !important; border: 1px solid var(--border-main) !important;
+  border-top: 2px solid var(--red) !important; border-radius: 0 !important; padding: 12px 16px !important;
+}
+div[data-testid="stMetric"] label {
+  font-family: var(--font-mono) !important; font-size: 0.58rem !important;
+  color: var(--text-dim) !important; text-transform: uppercase !important; letter-spacing: 0.10em !important;
+}
+div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+  font-family: var(--font-display) !important; color: var(--text-white) !important;
+  font-size: 1.60rem !important; font-weight: 800 !important; letter-spacing: 0.02em !important;
+}
+
+/* ─── Badges ─── */
+.badge {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.58rem;
+  font-weight: 600; padding: 3px 8px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 0;
+}
+.badge-investigation { background: rgba(200,16,46,0.15); color: #FF4D6A; border: 1px solid var(--red); }
+.badge-triage { background: rgba(204,85,0,0.15); color: #E0824A; border: 1px solid #CC5500; }
+.badge-logged { background: rgba(74,74,74,0.20); color: var(--text-secondary); border: 1px solid var(--border-prominent); }
+.badge-closed { background: rgba(46,107,48,0.15); color: #6AA66C; border: 1px solid #2E6B30; }
+.badge-high { background: rgba(200,16,46,0.12); color: #FF4D6A; border: 1px solid var(--red-muted); }
+.badge-medium { background: rgba(204,85,0,0.12); color: #E0824A; border: 1px solid #883300; }
+.badge-low { background: rgba(50,50,50,0.20); color: var(--text-secondary); border: 1px solid var(--border-main); }
+
+/* ─── Case Jacket ─── */
+.jacket-header {
+  background: var(--bg-panel); border: 1px solid var(--border-main);
+  border-top: 3px solid var(--red); padding: 18px 20px; margin-bottom: 16px;
+}
+.jacket-case-num {
+  font-family: var(--font-display); font-size: 1.60rem; font-weight: 900;
+  color: var(--text-white); letter-spacing: 0.04em; text-transform: uppercase;
+}
+.jacket-crime-type {
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+  color: var(--red); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px;
+}
+.jacket-field-label {
+  font-family: var(--font-mono); font-size: 0.56rem; text-transform: uppercase;
+  letter-spacing: 0.10em; color: var(--text-dim); margin-bottom: 3px;
+}
+.jacket-field-val { font-size: 0.84rem; color: var(--text-primary); font-weight: 500; }
+.jacket-field-mono { font-family: var(--font-mono); font-size: 0.80rem; color: var(--text-secondary); }
+
+/* ─── Section Headings ─── */
+.section-heading {
+  font-family: var(--font-display); font-size: 1.10rem; font-weight: 700;
+  color: var(--text-white); letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 4px 0;
+}
+.section-label {
+  font-family: var(--font-mono); font-size: 0.58rem; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--text-dim); margin-bottom: 3px;
+}
+.mono { font-family: var(--font-mono) !important; letter-spacing: 0.02em; }
+
+/* ─── Timeline ─── */
+.timeline-entry {
+  position: relative; padding: 0 0 16px 24px;
+  border-left: 1px solid var(--border-main); margin-left: 4px;
+}
+.timeline-entry::before {
+  content: ""; position: absolute; left: -4px; top: 3px;
+  width: 7px; height: 7px; background: var(--red); border-radius: 0;
+}
+.timeline-entry:last-child { border-left: 1px solid transparent; }
+.timeline-ts { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-dim); margin-bottom: 3px; }
+.timeline-desc { font-size: 0.84rem; color: var(--text-primary); line-height: 1.45; }
+
+/* ─── Evidence & Pattern Cards ─── */
+.evidence-record {
+  background: var(--bg-panel); border: 1px solid var(--border-main);
+  border-left: 3px solid #2E6B30; padding: 12px 16px; margin-bottom: 8px;
+}
+.evidence-id { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; color: #6AA66C; }
+.pattern-card {
+  background: var(--bg-panel); border: 1px solid var(--border-main);
+  border-left: 3px solid var(--red); padding: 12px 16px; margin-bottom: 8px;
+}
+.risk-score { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: #FF4D6A; }
+
+/* ─── Suspect Card ─── */
+.suspect-card {
+  background: var(--bg-panel); border: 1px solid var(--border-main);
+  border-top: 2px solid var(--red); padding: 14px 16px; margin-bottom: 8px;
+}
+.suspect-alias {
+  font-family: var(--font-display); font-size: 1.10rem; font-weight: 700;
+  color: var(--text-white); letter-spacing: 0.04em; text-transform: uppercase;
+}
+
+/* ─── Tabs ─── */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 0 !important; border-bottom: 1px solid var(--border-main) !important; background: transparent !important;
+}
+.stTabs [data-baseweb="tab"] {
+  background-color: transparent !important; border: none !important;
+  border-bottom: 2px solid transparent !important; color: var(--text-secondary) !important;
+  font-family: var(--font-display) !important; font-size: 0.82rem !important;
+  font-weight: 600 !important; letter-spacing: 0.06em !important;
+  text-transform: uppercase !important; padding: 10px 16px !important; border-radius: 0 !important;
+}
+.stTabs [aria-selected="true"] {
+  color: var(--text-white) !important; border-bottom: 2px solid var(--red) !important; font-weight: 700 !important;
+}
+
+/* ─── Buttons ─── */
+button[kind="primary"] {
+  background-color: var(--red) !important; color: var(--text-white) !important;
+  font-family: var(--font-display) !important; font-size: 0.80rem !important;
+  font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important;
+  border-radius: 0 !important; border: 1px solid var(--red-dark) !important;
+}
+button[kind="primary"]:hover { background-color: var(--red-dark) !important; }
+button[kind="secondary"] {
+  background-color: transparent !important; color: var(--text-secondary) !important;
+  border: 1px solid var(--border-main) !important; border-radius: 0 !important;
+  font-family: var(--font-display) !important; font-size: 0.80rem !important;
+  font-weight: 600 !important; letter-spacing: 0.06em !important; text-transform: uppercase !important;
+}
+button[kind="secondary"]:hover { border-color: var(--border-prominent) !important; color: var(--text-white) !important; }
+
+/* ─── Form Controls ─── */
+div[data-baseweb="select"] {
+  background-color: var(--bg-panel) !important; border-color: var(--border-main) !important; border-radius: 0 !important;
+}
+div[data-baseweb="select"]:focus-within { border-color: var(--red) !important; box-shadow: none !important; }
+input, textarea {
+  background-color: var(--bg-panel) !important; color: var(--text-primary) !important;
+  border-color: var(--border-main) !important; border-radius: 0 !important;
+}
+input:focus, textarea:focus { border-color: var(--red) !important; box-shadow: 0 0 0 1px var(--red) !important; }
+details {
+  background-color: var(--bg-panel) !important; border: 1px solid var(--border-main) !important; border-radius: 0 !important;
+}
+details summary {
+  color: var(--text-secondary) !important; font-family: var(--font-display) !important;
+  font-size: 0.80rem !important; font-weight: 600 !important;
+  letter-spacing: 0.06em !important; text-transform: uppercase !important;
+}
+div[data-baseweb="slider"] [role="slider"] { background-color: var(--red) !important; border-color: var(--red) !important; }
+div[data-testid="stAlert"] { border-radius: 0 !important; }
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-main); }
+::-webkit-scrollbar-thumb { background: var(--border-prominent); border-radius: 0; }
